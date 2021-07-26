@@ -1,0 +1,40 @@
+// Find longest palindrome in an array
+
+#include<stdio.h>
+int main()
+{
+    int n,a[100],i,temp,r,j;
+    scanf("%d",&n);
+    for(i=1;i<=n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    for(i=1;i<=n;i++)
+    {
+        for(j=i+1;j<=n;j++)
+        {
+            if(a[i]>a[j])
+            {
+                temp=a[i];
+                a[i]=a[j];
+                a[j]=temp;
+            }
+        }
+    }
+    for(i=n;i>=1;i--)
+    {
+        int ans=0;
+        temp=a[i];
+        while(a[i]!=0)
+        {
+            r=a[i]%10;
+            ans=ans*10+r;
+            a[i]=a[i]/10;
+        }
+        if(ans==temp)
+        {
+            printf("%d",ans);
+            break;
+        }
+    }
+}
