@@ -1,0 +1,26 @@
+// Find missing elements in the array of the given range
+
+#include<stdio.h>
+int main()
+{
+    int n,a[100],x,y,i,j;
+    scanf("%d",&n);
+    for(i=1;i<=n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    scanf("%d %d",&x,&y);
+    for(i=x;i<=y;i++)
+    {
+        int count=0;
+      for(j=1;j<=n;j++)
+      {
+          if(i!=a[j])
+          {
+              count++;
+          }
+      }
+      if(count==n)
+        printf("%d ",i);
+    }
+}
