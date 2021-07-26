@@ -1,0 +1,23 @@
+// Write a program to find sum of positive square in an array
+
+#include<stdio.h>
+int main()
+{
+    int n,a[100],i,j,sum=0;
+    scanf("%d",&n);
+    for(i=1;i<=n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    for(i=1;i<=n;i++)
+    {
+        for(j=1;j<=a[i];j++)
+        {
+            if(a[i]==j*j)
+            {
+                sum=sum+a[i];
+            }
+        }
+    }
+    printf("%d",sum);
+}
