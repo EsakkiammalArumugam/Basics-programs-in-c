@@ -1,0 +1,28 @@
+// Strong number
+
+#include<stdio.h>
+int main()
+{
+    int n,f,sum=0,temp,dig,i;
+    scanf("%d",&n);
+    temp=n;
+    while(n)
+    {
+        dig=n%10;
+        f=1;
+        for(i=1;i<=dig;i++)
+        {
+            f=f*i;
+        }
+        sum=sum+f;
+        n=n/10;
+    }
+    if(sum==temp)
+    {
+        printf("Strong number");
+    }
+    else
+    {
+        printf("not strong number");
+    }
+}
