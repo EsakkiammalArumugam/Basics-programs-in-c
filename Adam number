@@ -1,0 +1,30 @@
+// Adam number
+
+#include<stdio.h>
+int main()
+{
+    int n,dig,ans=0,revsq,ans1=0,sq,dig1;
+    scanf("%d",&n);
+    sq=n*n;
+    while(n)
+    {
+        dig=n%10;
+        ans=ans*10+dig;
+        n=n/10;
+    }
+    revsq=ans*ans;
+    while(revsq)
+    {
+        dig1=revsq%10;
+        ans1=ans1*10+dig1;
+        revsq=revsq/10;
+    }
+    if(ans1==sq)
+    {
+        printf("adam number");
+    }
+    else
+    {
+        printf("not a adam number");
+    }
+}
