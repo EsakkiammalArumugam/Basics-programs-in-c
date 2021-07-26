@@ -1,0 +1,32 @@
+// To check if two arrays are the same or not
+
+#include<stdio.h>
+int main()
+{
+    int a,b,a1[100],a2[100],i,count=0,j;
+    scanf("%d%d",&a,&b);
+    for(i=1;i<=a;i++)
+    {
+        scanf("%d",&a1[i]);
+    }
+    for(i=1;i<=b;i++)
+    {
+        scanf("%d",&a2[i]);
+    }
+    for(i=1;i<=a;i++)
+    {
+        for(j=i;i<=b;j++)
+        {
+            if(a1[i]==a2[j])
+            {
+                count++;
+                break;
+            }
+            break;
+        }
+    }
+    if(count==a)
+      printf("yes");
+    else
+      printf("no");
+}
