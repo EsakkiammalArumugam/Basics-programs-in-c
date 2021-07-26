@@ -1,0 +1,18 @@
+// Adding two fractions
+
+#include<stdio.h>
+int main()
+{
+    int a,b,c,d,gcd,x,y,i;
+    scanf("%d%d%d%d",&a,&b,&c,&d);
+    x=a*d+b*c;
+    y=b*d;
+    for(i=1;i<=x,i<=y;i++)
+    {
+        if(x%i==0 && y%i==0)
+        {
+            gcd=i;
+        }
+    }
+    printf("%d %d",x/gcd,y/gcd);
+}
