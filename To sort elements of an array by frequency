@@ -1,0 +1,39 @@
+// Write a program to sort elements of an array by frequency
+
+#include<stdio.h>
+int main()
+{
+    int n,a[100],freq[1000]={0},ind,i,j;
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+      scanf("%d",&a[i]);
+    for(i=0;i<n;i++)
+    {
+        if(a[i]!=-1)
+        {
+          int count=1;
+          for(j=i+1;j<n;j++)
+          {
+             if(a[i]==a[j])
+             {
+                count++;
+                a[j]=-1;
+             }
+          }
+          freq[i]=count;
+        }
+    }
+    for(i=n;i>=1;i--)
+    {
+        for(ind=0;ind<n;ind++)
+        {
+            if(i==freq[ind])
+            {
+                for(j=0;j<i;j++)
+                {
+                    printf("%d",a[ind]);
+                }
+            }
+        }
+    }
+}
