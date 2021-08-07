@@ -1,0 +1,11 @@
+// Reverse the string
+
+#include<stdio.h>
+int main()
+{
+    char s[100],i,len;
+    scanf("%[^\n]s",s);
+    for(len=0;s[len]!='\0';len++);
+    for(i=len-1;i>=0;i--)
+      printf("%c",s[i]);
+}
