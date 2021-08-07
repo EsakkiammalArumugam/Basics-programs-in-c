@@ -1,0 +1,22 @@
+// Smooth number
+
+#include<stdio.h>
+int main()
+{
+    int n,smooth,i=2;
+    scanf("%d %d",&n,&smooth);
+    while(n!=1)
+    {
+        while(n%i==0)
+        {
+            n=n/i;
+        }
+        i++;
+    }
+    i--;
+    if(smooth>=i)
+      printf("smooth number");
+    else
+      printf("not a smooth number");
+    
+}
