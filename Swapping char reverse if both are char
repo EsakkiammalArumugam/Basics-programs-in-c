@@ -1,0 +1,27 @@
+/**Swapping character reverse if both are character
+input:@hi h&llo b$e
+output:@eb o&llh i$h
+***/
+
+
+#include<stdio.h>
+int main()
+{
+    char s[100],i,j,temp,len;
+    scanf("%[^\n]s",s);
+    for(len=0;s[len]!='\0';len++);
+    for(i=0,j=len-1;i<j;i++,j--)
+    {
+        while(!(s[i]>=97&&s[i]<=122))
+          i++;
+        while(!(s[j]>=97&&s[j]<=122))
+          j--;
+        if(i<j)
+        {
+            temp=s[i];
+            s[i]=s[j];
+            s[j]=temp;
+        }
+    }
+    printf("%s",s);
+}
