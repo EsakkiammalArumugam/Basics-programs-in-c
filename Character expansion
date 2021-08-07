@@ -1,0 +1,23 @@
+// Character expansion
+
+#include<stdio.h>
+int main()
+{
+    char s[100],i,temp,j;
+    scanf("%[^\n]s",s);
+    for(i=0;s[i]!='\0';i++)
+    {
+        if(s[i]>='0' && s[i]<='9')
+        {
+            temp=s[i-1];
+            int ans=0;
+            while(s[i]>='0'&& s[i]<='9')
+            {
+                ans=ans*10+s[i]-48;
+                i++;
+            }
+            for(j=1;j<=ans;j++)
+              printf("%c",temp);
+        }
+    }
+}
