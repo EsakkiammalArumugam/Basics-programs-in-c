@@ -1,0 +1,22 @@
+// Left shift in array
+
+#include<stdio.h>
+int main()
+{
+    int n,a[100],r,i,j,temp;
+    scanf("%d",&n);
+    for(i=1;i<=n;i++)
+      scanf("%d",&a[i]);
+    scanf("%d",&r);
+    for(i=1;i<=r;i++)
+    {
+        temp=a[1];
+        for(j=1;j<=n-1;j++)
+        {
+            a[j]=a[j+1];
+        }
+        a[j]=temp;
+    }
+    for(i=1;i<=n;i++)
+      printf("%d ",a[i]);
+}
