@@ -1,0 +1,16 @@
+// Find the value in digit  i/p=5556,5 o/p=3
+
+#include<stdio.h>
+int main()
+{
+    int n,value,rem,count=0;
+    scanf("%d %d",&n,&value);
+    while(n)
+    {
+        rem=n%10;
+        if(rem==value)
+          count++;
+        n=n/10;
+    }
+    printf("%d",count);
+}
