@@ -1,0 +1,18 @@
+// maximum digit n=34213  o/p=4
+
+#include<stdio.h>
+int main()
+{
+    int n,m=-1,rem;
+    scanf("%d",&n);
+    while(n)
+    {
+        rem=n%10;
+        if(rem>m)
+        {
+            m=rem;
+        }
+        n=n/10;
+    }
+    printf("%d",m);
+}
