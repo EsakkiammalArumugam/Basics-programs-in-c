@@ -1,0 +1,30 @@
+// Lock and unlock  i/p=30012 o/p=12003
+
+#include<stdio.h>
+int main()
+{
+    int n,z=1,temp,i,ans=0;
+    scanf("%d",&n);
+    temp=n;
+    while(n)
+    {
+        if(n%10==0)
+            z=z*10;
+        n=n/10;
+    }
+    for(i=1;i<=9;i++)
+    {
+        n=temp;
+        while(n)
+        {
+            if(n%10==i)
+            {
+                ans=ans*10+n%10;
+                if(ans<10)
+                  ans=ans*z;
+            }
+            n=n/10;
+        }
+    }
+    printf("%d",ans);
+}
