@@ -1,0 +1,16 @@
+// Sum of odd numbers  i/p=2514795  o/p=27
+
+#include<stdio.h>
+int main()
+{
+    int n,sum=0,dig;
+    scanf("%d",&n);
+    while(n)
+    {
+        dig=n%10;
+        if(dig%2==1)
+         sum=sum+dig;
+        n=n/10;
+    }
+    printf("%d",sum);
+}
