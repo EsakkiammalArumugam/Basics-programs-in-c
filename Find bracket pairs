@@ -1,0 +1,21 @@
+// Brackets i/p=(()) o/p=2 pair of brackets
+
+#include<stdio.h>
+int main()
+{
+    char s[100];
+    int i,len,count=0;
+    scanf("%s",s);
+    for(len=0;s[len]!='\0';len++);
+    for(i=0;i<len;i++)
+    {
+        if(s[i]=='(')
+         count++;
+        else 
+         count--;
+    }
+    if(count==0)
+      printf("%d",len/2);
+    else
+      printf("-1");
+}
